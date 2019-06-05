@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="">
+</head>
+<body>
+	<div class="container start">
+		<img src="door.png" class="w-25 door1">
+		<img src="door2.png" class="w-25 ">
+		<img src="door3.png" class="w-25">
+	</div>
+	<div class="HarryPotter" style="background-image: url(bg.jpg); height: 800px; background-size: 100% 100%; display: none;"> 
+		<h1 style="font-size: 50px; color: white;">Помоги гарри найти его метлу, плащ и палочку! Надо заработать 3 очка!</h1>
+		<h1 style="font-size: 50px; color: white;" class="o">
+			<a id="score">0</a>
+		</h1>
+		<button class="btn_harrypotter btn btn-success">Выйти из игры</button>
+		<img src="mantiya.png" style="width: 100px; position: absolute; margin-left: 1200px; margin-top: 500px;" class="mantiya">
+		<img src="metla.png" style="width: 100px; position: absolute; margin-top: 400px; " class="metla">
+		<img src="palochka.png" style="width: 100px; position: absolute; margin-top: 400px; margin-left: 600px;" class="palochka">
+		<img src="gun.png" style="width: 100px; position: absolute; margin-top: 500px; margin-left: 900px;">
+		<img src="ring.png" style="width: 100px; position: absolute; margin-left: 1000px; margin-bottom: 200px;">
+	</div>
+<script type="text/javascript">
+	let score = 0
+	document.querySelector(".door1").onclick = function (){
+		alert("Вы попали в Хогвартс");
+		document.querySelector(".start").style.display = "none";
+		document.querySelector(".HarryPotter").style.display = "block";
+		
+	}
+	document.querySelector(".metla").onclick = function () {
+		document.querySelector(".metla").style.display = "none";
+		document.getElementById('score').innerHTML = score = score + 1
+		score
+		
+		
+	}
+	document.querySelector(".palochka").onclick = function () {
+		document.querySelector(".palochka").style.display = "none"
+		document.getElementById('score').innerHTML = score = score + 1
+		score
+			
+	}
+	document.querySelector(".mantiya").onclick = function (){
+		document.querySelector(".mantiya").style.display = "none"
+		document.getElementById('score').innerHTML = score = score + 1
+		score
+			
+	}
+	document.querySelector(".btn_harrypotter").onclick = function (){
+		document.querySelector(".HarryPotter").style.display = "none"
+		document.querySelector(".start").style.display = "block"
+	}
+	
+</script>
+</body>
+</html>
